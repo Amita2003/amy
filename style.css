@@ -1,0 +1,79 @@
+body {
+    background-color: rgb(206, 111, 143);
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container {
+    height: 70vh;
+    display: flex;
+    flex-direction: column; /* Added for layout */
+    justify-content: center;
+    align-items: center;
+}
+
+.game {
+    height: 60vmin;
+    width: 60vmin;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5vmin;
+}
+
+.box {
+    height: 18vmin;
+    width: 18vmin;
+    border-radius: 1rem;
+    border: none;
+    box-shadow: 0 0 1rem rgb(209, 123, 143);
+    font-size: 8vmin;
+    background-color: bisque;
+    cursor: pointer; /* Change cursor to pointer */
+    transition: background-color 0.3s; /* Smooth color transition */
+}
+
+.box:hover {
+    background-color: rgba(255, 200, 150, 0.8); /* Light hover effect */
+}
+
+#reset-btn {
+    padding: 1rem;
+    font-size: 1.25rem;
+    background-color: black;
+    color: beige;
+    margin-top: 20px; /* Space above the reset button */
+}
+
+#winner-message {
+    margin-top: 20px;
+    font-size: 2rem;
+    text-align: center;
+    color: gold;
+    display: none; /* Initially hidden */
+}
+
+@keyframes burst {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(1.2);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 0;
+    }
+}
+
+.burst {
+    animation: burst 0.50s forwards; /* Use the burst animation */
+}
